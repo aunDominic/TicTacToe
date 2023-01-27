@@ -118,5 +118,5 @@ document.getElementsByClassName('restart')[0].addEventListener('click', function
 {
     gameBoard.setBoard();
     displayController.render();
-    document.getElementsByClassName('winner')[0].classList.toggle('open');
+    if (document.getElementsByClassName('winner')[0].classList.contains("open")) document.getElementsByClassName('winner')[0].classList.toggle('open');
 });
