@@ -21,7 +21,7 @@ const gameBoard = (() => {
         if (winner !==  0){
             return winner;
         }
-        else if (turns === 9){
+        else if (turns === 10){
             return 0;
         }
     };
@@ -104,6 +104,13 @@ for(let i = 0; i < boxes.length; i++){
         if (res == 2){
             // player 2 wins;
             document.getElementsByClassName('winner')[0].classList.toggle('open');
+        }
+        if (res == 0){
+            document.getElementsByClassName('winner')[0].children[0].innerHTML= "nobody won lol";
+
+            document.getElementsByClassName('winner')[0].classList.toggle('open');
+
+
         }
     })
 }
